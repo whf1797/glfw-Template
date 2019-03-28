@@ -18,6 +18,12 @@
 		DC2E2F47223CA3B400363CBD /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2E2F46223CA3B400363CBD /* CoreVideo.framework */; };
 		DC2E2F6B223CA9B200363CBD /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = DC2E2F6A223CA9B200363CBD /* glad.c */; };
 		DC2E2F6D223CA9C300363CBD /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2E2F6C223CA9C200363CBD /* libglfw3.a */; };
+		E2118DF7224BAE3C00A0640F /* shader_m.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2118DF5224BAE3C00A0640F /* shader_m.cpp */; };
+		E2118DF9224BAF6500A0640F /* vshader.vs in Resources */ = {isa = PBXBuildFile; fileRef = E2118DF8224BAF6500A0640F /* vshader.vs */; };
+		E2118DFB224BAF6E00A0640F /* fshader.fs in Resources */ = {isa = PBXBuildFile; fileRef = E2118DFA224BAF6E00A0640F /* fshader.fs */; };
+		E2118E00224BD18500A0640F /* camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E2118DFE224BD18500A0640F /* camera.cpp */; };
+		E2118E02224BD23B00A0640F /* lamp.vs in Resources */ = {isa = PBXBuildFile; fileRef = E2118E01224BD23B00A0640F /* lamp.vs */; };
+		E2118E04224BD24B00A0640F /* lamp.fs in Resources */ = {isa = PBXBuildFile; fileRef = E2118E03224BD24B00A0640F /* lamp.fs */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +54,14 @@
 		DC2E2F46223CA3B400363CBD /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		DC2E2F6A223CA9B200363CBD /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
 		DC2E2F6C223CA9C200363CBD /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libglfw3.a; sourceTree = "<group>"; };
+		E2118DF5224BAE3C00A0640F /* shader_m.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shader_m.cpp; sourceTree = "<group>"; };
+		E2118DF6224BAE3C00A0640F /* shader_m.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shader_m.hpp; sourceTree = "<group>"; };
+		E2118DF8224BAF6500A0640F /* vshader.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = vshader.vs; sourceTree = "<group>"; };
+		E2118DFA224BAF6E00A0640F /* fshader.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = fshader.fs; sourceTree = "<group>"; };
+		E2118DFE224BD18500A0640F /* camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = camera.cpp; sourceTree = "<group>"; };
+		E2118DFF224BD18500A0640F /* camera.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = camera.hpp; sourceTree = "<group>"; };
+		E2118E01224BD23B00A0640F /* lamp.vs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lamp.vs; sourceTree = "<group>"; };
+		E2118E03224BD24B00A0640F /* lamp.fs */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = lamp.fs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +108,14 @@
 				D6BCA4191F2E36AD00B91743 /* Info.plist */,
 				D6BCA40E1F2E36AD00B91743 /* Supporting Files */,
 				D6BCA4261F2E375100B91743 /* main.cpp */,
+				E2118DF5224BAE3C00A0640F /* shader_m.cpp */,
+				E2118DF6224BAE3C00A0640F /* shader_m.hpp */,
+				E2118DFE224BD18500A0640F /* camera.cpp */,
+				E2118DFF224BD18500A0640F /* camera.hpp */,
+				E2118DF8224BAF6500A0640F /* vshader.vs */,
+				E2118DFA224BAF6E00A0640F /* fshader.fs */,
+				E2118E01224BD23B00A0640F /* lamp.vs */,
+				E2118E03224BD24B00A0640F /* lamp.fs */,
 			);
 			path = 01OpenGL;
 			sourceTree = "<group>";
@@ -207,8 +229,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2118E04224BD24B00A0640F /* lamp.fs in Resources */,
+				E2118DF9224BAF6500A0640F /* vshader.vs in Resources */,
 				D6BCA4151F2E36AD00B91743 /* Assets.xcassets in Resources */,
+				E2118DFB224BAF6E00A0640F /* fshader.fs in Resources */,
 				D6BCA4181F2E36AD00B91743 /* Main.storyboard in Resources */,
+				E2118E02224BD23B00A0640F /* lamp.vs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +245,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2118E00224BD18500A0640F /* camera.cpp in Sources */,
 				D6BCA4271F2E375100B91743 /* main.cpp in Sources */,
+				E2118DF7224BAE3C00A0640F /* shader_m.cpp in Sources */,
 				DC2E2F6B223CA9B200363CBD /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
